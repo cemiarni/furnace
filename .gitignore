@@ -87,6 +87,7 @@ celerybeat-schedule
 
 # virtualenv
 .venv
+.release-test-venv
 venv/
 ENV/
 
