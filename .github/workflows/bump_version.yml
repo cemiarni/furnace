@@ -15,6 +15,7 @@ jobs:
         python-version: 3.8
     - name: Install dependencies
       run: |
+        sudo apt update
         sudo apt install make
     - name: Bump version
       run: "echo furnace_version=$(make bump-version) | tee --append $GITHUB_ENV"
