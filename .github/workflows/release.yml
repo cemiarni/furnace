@@ -24,12 +24,12 @@ jobs:
     - name: Release test
       run:
         make release-test
-    - name: Publish a Python distribution to PyPI
-      uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        user: __token__
-        password: ${{ secrets.PYPI_API_TOKEN }}
-        verbose: true
+        #- name: Publish a Python distribution to PyPI
+        #  uses: pypa/gh-action-pypi-publish@release/v1
+        #  with:
+        #    user: __token__
+        #    password: ${{ secrets.PYPI_API_TOKEN }}
+        #    verbose: true
     - name: Read version
       run: "echo furnace_version=$(cat furnace/VERSION) | tee --append $GITHUB_ENV"
     - name: Tag
